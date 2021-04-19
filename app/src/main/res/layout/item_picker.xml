@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<com.google.android.material.floatingactionbutton.FloatingActionButton xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_margin="@dimen/margin_circle_butt"
+    android:layout_width="@dimen/ancho_circle_butt"
+    android:layout_height="@dimen/ancho_circle_butt"
+
+    android:id="@+id/flotante_number"
+    android:layout_gravity="center"
+    android:clickable="true"
+    android:focusable="true"
+    android:elevation="2.0dip"
+
+
+    app:pressedTranslationZ="5.0dip"
+    app:elevation="2.0dip"
+    app:rippleColor="@color/ripple_color_pick"
+    app:backgroundTint="@color/quantum_white_100"
+
+
+
+
+    >
+
+</com.google.android.material.floatingactionbutton.FloatingActionButton>

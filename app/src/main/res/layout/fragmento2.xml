@@ -1,0 +1,202 @@
+
+
+
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Principal"
+    android:background="@color/fondo_background_aplicacion"
+    android:fillViewport="true"
+    >
+
+
+<androidx.constraintlayout.widget.ConstraintLayout
+xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="0dp"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+tools:context=".fragment.Frag_Sudoku"
+android:background="@color/fondo_background_aplicacion">
+
+
+
+
+
+
+
+
+<androidx.cardview.widget.CardView
+
+    android:layout_marginTop="@dimen/spacing_mlarge"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:elevation="22.0dip"
+    android:id="@+id/cardview_sudoku"
+    android:background="@color/fondo_background_aplicacion"
+    android:layout_gravity="center">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background_item_cuadro"
+        android:overScrollMode="never"
+        android:id="@+id/recycler_sudoku"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        app:spanCount="3"
+        tools:itemCount="9"
+        tools:listitem="@layout/item_and_recycler_cuadro"
+        >
+    </androidx.recyclerview.widget.RecyclerView>
+</androidx.cardview.widget.CardView>
+
+
+
+
+
+
+<androidx.cardview.widget.CardView
+
+    app:layout_constraintTop_toBottomOf="@id/cardview_sudoku"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintBottom_toTopOf="@id/boton_solucionar"
+    android:visibility="visible"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/cards_margins"
+    app:cardCornerRadius="6dip"
+    app:cardElevation="2.0dip"
+    >
+    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="?actionBarSize">
+            <View android:layout_width="@dimen/spacing_large" android:layout_height="0.0dip" />
+            <TextView android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead" android:textStyle="bold" android:textColor="@color/grey_60" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/titular_detalles" android:layout_weight="1.0" />
+
+        </LinearLayout>
+        <View android:background="@color/grey_10" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+        <View android:layout_width="0.0dip" android:layout_height="@dimen/spacing_middle" />
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="@dimen/spacing_xmlarge">
+            <View android:layout_width="@dimen/spacing_large" android:layout_height="0.0dip" />
+            <TextView android:textAppearance="@style/Base.TextAppearance.AppCompat.Body2" android:textColor="@color/grey_60" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/subtitulo_dificultad" android:layout_weight="1.0" />
+            <TextView android:textAppearance="@style/Base.TextAppearance.AppCompat.Body2" android:textColor="@color/grey_40" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:id="@+id/textview_dificulty" />
+            <View android:layout_width="@dimen/spacing_large" android:layout_height="0.0dip" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="@dimen/spacing_xmlarge">
+            <View android:layout_width="@dimen/spacing_large" android:layout_height="0.0dip" />
+            <TextView android:textAppearance="@style/Base.TextAppearance.AppCompat.Body2" android:textColor="@color/grey_60" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/subtitulo_cantidad_encontrada" android:layout_weight="1.0" />
+            <TextView android:textAppearance="@style/Base.TextAppearance.AppCompat.Body2" android:textColor="@color/grey_40" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:id="@+id/textview_cantidadsoluciones" />
+            <View android:layout_width="@dimen/spacing_large" android:layout_height="0.0dip" />
+        </LinearLayout>
+
+        <View android:layout_width="0.0dip" android:layout_height="@dimen/spacing_middle" />
+        <View android:background="@color/grey_10" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+        <LinearLayout
+            android:id="@+id/lay_otra_solucion"
+            android:visibility="visible"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:background="?selectableItemBackground"
+            android:clickable="true"
+            android:onClick="MostrarOtraSolucionClick"
+            android:layout_width="fill_parent"
+            android:layout_height="?actionBarSize">
+            <TextView
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead"
+                android:textColor="@color/quantum_vanillagreen600"
+                android:layout_width="wrap_content"
+                android:layout_height="?actionBarSize"
+                android:gravity="center"
+                android:text="@string/otra_solucion"
+
+                />
+        </LinearLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<LinearLayout
+
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toTopOf="@id/boton_solucionar"
+    app:layout_constraintBottom_toBottomOf="@id/boton_solucionar"
+
+    android:id="@+id/notificLay"
+    android:gravity="center"
+    android:visibility="visible"
+    android:layout_gravity="center"
+    android:orientation="horizontal"
+    android:layout_marginBottom="25dp"
+    android:layout_alignParentBottom="true"
+    android:layout_alignParentLeft="true"
+    android:layout_alignParentStart="true"
+    android:layout_height="35dp"
+    android:layout_width="match_parent"
+
+    >
+    <TextView android:textAppearance="@style/Base.TextAppearance.AppCompat.Body2"
+        android:textColor="@android:color/white"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/notificaciontextview"
+        android:visibility="invisible"
+        android:text=""
+
+
+        />
+
+
+</LinearLayout>
+
+<Button
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintBottom_toBottomOf="parent"
+    android:layout_marginTop="@dimen/spacing_large"
+    android:layout_marginBottom="@dimen/spacing_mlarge"
+
+    android:layout_alignParentBottom="true"
+    android:layout_centerInParent="true"
+    android:id="@+id/boton_solucionar"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp"
+    android:onClick="BotonClick"
+    android:textColor="#ffffff"
+    android:background="@drawable/boton_solucionar"
+    android:text="@string/boton_solucionar" />
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+</ScrollView>
+
+
+

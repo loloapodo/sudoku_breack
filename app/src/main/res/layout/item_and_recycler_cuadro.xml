@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.recyclerview.widget.RecyclerView
+
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/background_item_cuadro"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_margin="1dp"
+    android:id="@+id/recycler_cuadro"
+    android:overScrollMode="never"
+
+    app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+    app:spanCount="3"
+    tools:itemCount="9"
+    tools:listitem="@layout/item_numero"
+
+    >
+
+</androidx.recyclerview.widget.RecyclerView>
+
+
+
+
+
+

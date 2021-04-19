@@ -1,0 +1,6 @@
+<resources>
+	<dimen name="ancho_celda">41.6dp</dimen>
+	<dimen name="texto_celda">19.2sp</dimen>
+	<dimen name="ancho_circle_butt">48dp</dimen>
+	<dimen name="margin_circle_butt">6.4dp</dimen>
+</resources>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:visibility="visible"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/cards_margins"
+    app:cardCornerRadius="6dip"
+    app:cardElevation="2.0dip">
+    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+        <LinearLayout
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="?actionBarSize">
+            <View android:layout_width="@dimen/spacing_large" android:layout_height="0.0dip" />
+
+
+            <ImageView
+                android:src="@drawable/ic_round_keyboard_24"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center" />
+
+
+        </LinearLayout>
+        <View android:background="@color/grey_10" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+        <View android:layout_width="0.0dip" android:layout_height="@dimen/spacing_middle" />
+        <LinearLayout
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <View android:layout_width="@dimen/spacing_large" android:layout_height="0.0dip" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:overScrollMode="never"
+                android:background="@drawable/background_item_picker"
+                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                app:spanCount="5"
+                tools:itemCount="10"
+                tools:listitem="@layout/item_picker"
+
+
+                android:id="@+id/recycler_picker">
+
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+
+
+            <View android:layout_width="@dimen/spacing_large" android:layout_height="0.0dip" />
+        </LinearLayout>
+
+
+        <View android:layout_width="0.0dip" android:layout_height="@dimen/spacing_middle" />
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

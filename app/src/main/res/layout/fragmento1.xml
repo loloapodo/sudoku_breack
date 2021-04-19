@@ -1,0 +1,154 @@
+
+
+
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Principal"
+    android:background="@color/fondo_background_aplicacion"
+    android:fillViewport="true"
+
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        tools:context=".Principal"
+        android:background="@color/fondo_background_aplicacion">
+
+
+
+
+
+        <androidx.cardview.widget.CardView
+
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/recycler_picker"
+
+
+            android:layout_marginTop="@dimen/spacing_mlarge"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:elevation="22.0dip"
+            android:id="@+id/cardview_sudoku"
+            android:background="@color/fondo_background_aplicacion"
+            android:layout_gravity="center">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/background_item_cuadro"
+                android:overScrollMode="never"
+                android:id="@+id/recycler_sudoku"
+                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                app:spanCount="3"
+                tools:itemCount="9"
+                tools:listitem="@layout/item_and_recycler_cuadro"
+                >
+            </androidx.recyclerview.widget.RecyclerView>
+        </androidx.cardview.widget.CardView>
+
+
+
+
+
+
+
+
+
+
+        <androidx.recyclerview.widget.RecyclerView
+
+            app:layout_constraintTop_toBottomOf="@id/cardview_sudoku"
+            app:layout_constraintBottom_toTopOf="@id/boton_solucionar"
+
+            android:layout_marginTop="@dimen/spacing_medium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:overScrollMode="never"
+            android:layout_marginLeft="8dp"
+            android:id="@+id/recycler_picker"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            app:spanCount="5"
+            tools:itemCount="10"
+            tools:listitem="@layout/item_picker"
+            android:layout_marginStart="8dp" />
+
+
+
+
+             <Button
+
+                 app:layout_constraintBottom_toBottomOf="parent"
+                 app:layout_constraintStart_toStartOf="parent"
+                 app:layout_constraintEnd_toEndOf="parent"
+                 android:layout_marginBottom="@dimen/spacing_large"
+                 android:layout_marginTop="@dimen/spacing_middle"
+
+
+
+
+            android:id="@+id/boton_solucionar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:onClick="BotonClick"
+            android:textColor="#ffffff"
+            android:background="@drawable/boton_solucionar"
+            android:text="@string/boton_solucionar"
+
+
+
+
+            />
+
+
+        <LinearLayout
+
+
+            app:layout_constraintTop_toTopOf="@id/boton_solucionar"
+            app:layout_constraintBottom_toBottomOf="@id/boton_solucionar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginBottom="@dimen/spacing_large"
+
+            android:layout_centerInParent="true"
+            android:id="@+id/notificLay"
+            android:gravity="center"
+            android:visibility="invisible"
+            android:layout_gravity="center"
+            android:orientation="horizontal"
+
+
+            android:layout_height="35dp"
+            android:layout_width="match_parent">
+
+            <TextView android:textAppearance="@style/Base.TextAppearance.AppCompat.Body2"
+                android:textColor="@android:color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/notificaciontextview"
+                android:visibility="invisible"
+                android:text=""
+
+                />
+        </LinearLayout>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
+
+
+

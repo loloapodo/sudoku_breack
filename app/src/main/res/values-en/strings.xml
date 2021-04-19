@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+	<string name="title_activity_sudoku_9x9">Sudoku_9x9</string>
+	<string name="title_activity_tab_">Tab_Act</string>
+	<string name="action_settings">Settings</string>
+	<string name="section_format">Hello World from section: %1$d</string>
+	<string name="boton_solucionar">Solve</string>
+	<string name="notif_green">Solution found</string>
+	<string name="notif_red">Error in the entrance</string>
+	<string name="notif_yellow">It has no solution</string>
+	<string name="titular_detalles">Details</string>
+	<string name="subtitulo_cantidad_encontrada">Number of solutions.</string>
+	<string name="subtitulo_dificultad">Difficulty level</string>
+	<string name="subtitulo_numeros_completados">Completed numbers.</string>
+	<string name="dif_extremo">Extreme</string>
+	<string name="dif_dificil">Hard</string>
+	<string name="dif_medio">Medium</string>
+	<string name="dif_facil">Easy</string>
+	<string name="boton_parar">Stop</string>
+	<string name="otra_solucion">Next Solution</string>
+	<string name="Tab1">Sudoku</string>
+	<string name="Tab2">Solutions</string>
+</resources>

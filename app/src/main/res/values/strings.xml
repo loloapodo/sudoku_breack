@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">Resuelve Sudoku</string>
+    <string name="title_activity_sudoku_9x9">sudoku_9x9</string>
+    <string name="title_activity_tab_">Tab_Act</string>
+    <string name="action_settings">Settings</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+
+
+
+    <string name="boton_solucionar">Solucionar</string>
+    <string name="notif_green">Solución encontrada</string>
+    <string name="notif_red">Error en la entrada</string>
+    <string name="notif_yellow">No tiene solución</string>
+    <string name="titular_detalles">Detalles</string>
+    <string name="subtitulo_cantidad_encontrada">Cantidad de Soluciones</string>
+    <string name="subtitulo_dificultad">Nivel de Dificultad</string>
+    <string name="subtitulo_numeros_completados">Números completados</string>
+    <string name="dif_extremo">Extremo</string>
+    <string name="dif_dificil">Difícil</string>
+    <string name="dif_medio">Medio</string>
+    <string name="dif_facil">Fácil</string>
+    <string name="boton_parar">Detener</string>
+    <string name="otra_solucion">Mostrar otra</string>
+    <string name="Tab1">Sudoku</string>
+    <string name="Tab2">Soluciones</string>
+</resources>

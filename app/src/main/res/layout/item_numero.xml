@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/background_item_numero">
+
+    <TextView
+        android:id="@+id/item_numero_textview"
+        android:layout_width="@dimen/ancho_celda"
+        android:layout_height="@dimen/ancho_celda"
+
+        android:gravity="center"
+        android:textColor="@color/pluma_color"
+        android:textSize="@dimen/texto_celda"
+
+        tools:text="9" />
+
+
+</LinearLayout>
