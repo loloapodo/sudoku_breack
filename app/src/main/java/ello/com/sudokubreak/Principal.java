@@ -76,7 +76,7 @@ public class Principal extends AppCompatActivity implements Frag1Comunication_I 
 
          fragment1= Frag_Sudoku.newInstance(1);
         adapter.AgregarFragmento(fragment1);
-        fragment1.SetSudoku(new Sudoku_plano(JefeChinos.getSudokuEjmplo()));
+        fragment1.SetSudoku(new Sudoku_plano(JefeChinos.getSudokuVacio()));
     }
     private void CrearFragmento2() {
 
